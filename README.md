@@ -88,6 +88,8 @@ Open an [issue](../../issues/new/choose). Please include:
 
 - **RISC OS itself** is RISC OS Open's, in Timothy Baldwin's
   [Linux port](https://github.com/TimothyEBaldwin/RISC_OS_Linux_Source).
+  [What RISC OS on Linux adds to his port](docs/what-we-added.md), item
+  by item against his to-do list.
 - **The images' own parts and how they're built:**
   [riscos-linux](https://github.com/adyoull/riscos-linux).
 - **The packages Updates installs:**
