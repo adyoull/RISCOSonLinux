@@ -1,0 +1,91 @@
+# Using RISC OS on Linux
+
+## Starting and shutting down
+
+- **Starting:** the machine starts straight into the RISC OS desktop. A start-up screen says what's happening: the disc being enlarged on the first start, the network, the clock, RISC OS starting.
+- **Shutting down:** Shutdown (the Task manager's menu, or Ctrl-Shift-F12) powers the machine off.
+
+## Screen
+
+- **The mode at start-up:** the desktop starts at the screen's own size, in 16 million colours. Very large screens are halved to fit RISC OS's 16 MB screen.
+- **Choosing a mode:** pick another in Configure → Screen and click Set. That one is used at every start.
+- **In a virtual machine:** resizing the window changes the mode to fit, for that session.
+
+## Mouse and keyboard
+
+- **The buttons:** left is Select, middle is Menu, right is Adjust.
+- **The wheel** scrolls the window under the pointer.
+- **USB:** keyboards and mice are USB.
+
+## Sound
+
+RISC OS's own sound modules play through Linux:
+- HDMI, if the screen takes sound;
+- otherwise the Pi's headphone socket;
+- a USB sound card comes first when one is plugged in.
+
+Set the volume in Configure → Sound, or with `*MixVolume`.
+
+## Network
+
+- **Wired:** wired Ethernet with DHCP works as it comes.
+- **Wi-Fi, or a fixed address:** set them in Configure → **Linux network**.
+- **Where the settings are kept:** in plain text in `/riscos/net/config` on the Linux partition, including the Wi-Fi password.
+- **A network that comes up late:** PackMan, NetSurf and the rest still work. RISC OS's name servers follow Linux's.
+
+![Configure → Linux network](screenshots/1.0.0017/03-linux-network.png)
+
+## The time
+
+Linux sets the clock from the internet as soon as the network is up, and
+every hour after. A Pi has no clock battery, so the time is also kept on the
+card and put back at the next start.
+
+## Discs
+
+- **HardDisc4** is on the icon bar as a hard disc icon:
+  - Select opens it;
+  - Menu has Open '$', Free and Dismount.
+- **USB discs and SD cards:**
+  - **Plugging one in:** its icon appears on the icon bar, named by its volume label. FAT, exFAT, NTFS and ext4 all work.
+  - **Taking one out:** choose Eject from its menu first, so everything is written.
+- **IXFS:$** on the icon bar shows the files RISC OS can see on the Linux side.
+
+## Programs included
+
+- **Apps.Network:** NetSurf (web browser) and RDPServer (remote desktop).
+- **Apps.Document:** Folio (PDF and ebook reader).
+  - PDF files open in Folio when double-clicked.
+  - To use another viewer, delete `!Boot.Choices.Boot.Tasks.FolioPDF`.
+- **Installed the PackMan way:** all three are installed as PackMan installs them, so PackMan upgrades them.
+- **More from PackMan:** it lists RISC OS Open's packages and riscos-packages, plus riscosdev.com's autobuilt packages.
+
+## Linux commands from RISC OS: `*Linux` and the root password
+
+- **Running a Linux command:** `*Linux <command>` runs it as root and prints its output; use a task window for anything long. For example, `*Linux apt-get install htop`.
+- **The password:** the first time `*Linux` or Updates runs a command, it asks you to choose a root password.
+  - After that it asks for the password, but not again until it has gone unused for five minutes.
+  - `*LinuxPassword` changes it.
+  - After five wrong tries in a row, wait a minute.
+- **Forgotten it?** See [Troubleshooting](troubleshooting.md#forgotten-root-password).
+
+## Protected RISC OS
+
+RISC OS runs as an ordinary Linux user, not as root, and sees only its own
+files. A RISC OS program can't change Linux or reach the rest of the disc.
+`*Linux` and Updates are the deliberate way through, which is why they ask
+for the root password.
+
+To run RISC OS as root, with the whole disc, as earlier builds did: on the
+Linux partition, change `/etc/riscos/protect` to say `off`. RISC OS itself
+can't change that file.
+
+## USB devices for RISC OS programs
+
+Linux drives the USB hardware. The image's USBDriver gives RISC OS programs
+RISC OS's own USB interface for the devices Linux has no driver for:
+- phones, tablets and cameras in file transfer (MTP/PTP) mode;
+- and the like.
+
+`*USBDevices` lists them. PDFS (in HardDisc4.TestBed.PDFS) mounts phones
+this way.

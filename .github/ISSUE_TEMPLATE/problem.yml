@@ -1,0 +1,43 @@
+name: Something doesn't work
+description: A problem with RISC OS on Linux on your machine
+labels: ["problem"]
+body:
+  - type: dropdown
+    id: machine
+    attributes:
+      label: Machine
+      options:
+        - Raspberry Pi 3 / 3B+ / CM3
+        - Raspberry Pi Zero 2 W
+        - Raspberry Pi 4 / 400 / CM4
+        - Raspberry Pi 5 / 500 / CM5
+        - Apple Silicon Mac (UTM)
+        - Windows Dev Kit 2023
+        - Pinebook / Pinebook Pro
+        - Other UEFI machine or virtual machine (say which below)
+    validations:
+      required: true
+  - type: input
+    id: image
+    attributes:
+      label: Image build
+      description: The release you installed, e.g. 1.0.0018
+    validations:
+      required: true
+  - type: textarea
+    id: versions
+    attributes:
+      label: Versions
+      description: What Configure → Updates shows for riscos-rom, riscos-support, riscos-harddisc and the kernel (or *Linux dpkg -l 'riscos-*')
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What you did, what you expected, and what happened instead
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs
+      description: For a start-up problem, attach riscos-log.txt and kernel-log.txt from the LOGS folder on the card's FAT partition (see docs/troubleshooting.md)
