@@ -81,7 +81,8 @@ Open an [issue](../../issues/new/choose). Please include:
 - Discs inside the machine in RISC OS's own format (FileCore on an internal
   SSD or NVMe) aren't offered to RISC OS. USB discs and SD cards are.
 - Socket_Connect can report success for a connection that was refused.
-- Iris isn't included. Get it from riscosdev.com or PackMan.
+- Iris isn't included. Install it with PackMan, which is already set up
+  with riscosdev.com's list.
 
 ## Where it comes from
 

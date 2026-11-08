@@ -65,7 +65,12 @@ card and put back at the next start.
   - PDF files open in Folio when double-clicked.
   - To use another viewer, delete `!Boot.Choices.Boot.Tasks.FolioPDF`.
 - **Installed the PackMan way:** all three are installed as PackMan installs them, so PackMan upgrades them.
-- **More from PackMan:** it lists RISC OS Open's packages and riscos-packages, plus riscosdev.com's autobuilt packages.
+- **More from PackMan:** it comes set up, with nothing to add. Open PackMan (Apps.Admin) and install:
+  - RISC OS Open's packages (its two lists);
+  - riscosdev.com's autobuilt packages, Iris the web browser among them;
+  - [riscos-packages](https://github.com/adyoull/riscos-packages): Andrew Youll's apps and ports.
+
+  The certificates its https lists need (!CaCertificates) are installed too.
 
 ## Linux commands from RISC OS: `*Linux` and the root password
 
