@@ -3,6 +3,8 @@
 ## Starting and shutting down
 
 - **Starting:** the machine starts straight into the RISC OS desktop. A start-up screen says what's happening: the disc being enlarged on the first start, the network, the clock, RISC OS starting.
+
+  ![The start-up screen](screenshots/1.0.0019/01-startup-screen.png)
 - **Shutting down:** Shutdown (the Task manager's menu, or Ctrl-Shift-F12) powers the machine off.
 
 ## Screen
@@ -11,10 +13,12 @@
 - **Choosing a mode:** pick another in Configure → Screen and click Set. That one is used at every start.
 - **In a virtual machine:** resizing the window changes the mode to fit, for that session.
 
+![Configure → Screen](screenshots/1.0.0019/04-screen.png)
+
 ## Mouse and keyboard
 
 - **The buttons:** left is Select, middle is Menu, right is Adjust.
-- **The wheel** scrolls the window under the pointer.
+- **The wheel** scrolls the window under the pointer. Configure → Scroll wheel turns it round (reversed, as on a Mac).
 - **USB:** keyboards and mice are USB.
 
 ## Sound
@@ -33,7 +37,7 @@ Set the volume in Configure → Sound, or with `*MixVolume`.
 - **Where the settings are kept:** in plain text in `/riscos/net/config` on the Linux partition, including the Wi-Fi password.
 - **A network that comes up late:** PackMan, NetSurf and the rest still work. RISC OS's name servers follow Linux's.
 
-![Configure → Linux network](screenshots/1.0.0017/03-linux-network.png)
+![Configure → Linux network](screenshots/1.0.0019/03-linux-network.png)
 
 ## The time
 
@@ -50,6 +54,9 @@ card and put back at the next start.
   - **Plugging one in:** its icon appears on the icon bar, named by its volume label. FAT, exFAT, NTFS and ext4 all work.
   - **Taking one out:** choose Eject from its menu first, so everything is written.
 - **IXFS:$** on the icon bar shows the files RISC OS can see on the Linux side.
+
+![HardDisc4's menu](screenshots/1.0.0019/06-harddisc4-menu.png)
+![HardDisc4 and its Free window](screenshots/1.0.0019/07-harddisc4-free.png)
 
 ## Programs included
 
@@ -68,6 +75,10 @@ card and put back at the next start.
   - `*LinuxPassword` changes it.
   - After five wrong tries in a row, wait a minute.
 - **Forgotten it?** See [Troubleshooting](troubleshooting.md#forgotten-root-password).
+
+![*Linux in a task window](screenshots/1.0.0019/10-linux-command.png)
+
+![The root password, chosen the first time](screenshots/1.0.0019/09-root-password.png)
 
 ## Protected RISC OS
 

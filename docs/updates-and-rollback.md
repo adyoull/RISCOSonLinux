@@ -11,15 +11,19 @@ machine up to date:
 | `riscos-kernel-*` | the Linux kernel this machine starts (Pi, generic or Dev Kit) |
 | Debian's packages | Linux itself, with its security fixes |
 
-![Configure → Updates](screenshots/1.0.0017/04-updates.png)
+![Updates finds the new versions](screenshots/1.0.0019/11-updates-found.png)
 
 ## Updating
 
 1. **Check for updates** shows what's new. **Changes** shows what each new
    version changed.
+
+   ![Changes](screenshots/1.0.0019/12-updates-changes.png)
 2. **Install updates** installs them. It asks for the root password: see
    [Using](using.md#linux-commands-from-risc-os-linux-and-the-root-password).
 3. Shut down and switch on again to use them.
+
+   ![Installed](screenshots/1.0.0019/14-updates-installed.png)
 
 From the command line: `*Linux apt-get update` then
 `*Linux apt-get full-upgrade`.
