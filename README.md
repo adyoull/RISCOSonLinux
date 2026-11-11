@@ -82,7 +82,12 @@ Open an [issue](../../issues/new/choose). Please include:
   SSD or NVMe) aren't offered to RISC OS. USB discs and SD cards are.
 - Socket_Connect can report success for a connection that was refused.
 - Iris isn't included. Install it with PackMan, which is already set up
-  with riscosdev.com's list.
+  with riscosdev.com's list. (If PackMan says "One or more files conflict",
+  run Configure → Updates first: riscos-harddisc 1.0.0040-1 fixes it.)
+- The Raspberry Pi 5's fan doesn't start on 1.0.0020 as downloaded:
+  Configure → Updates brings the kernel that drives it (6.6.78-7).
+- Full-screen Linux programs (nano, vi, top) don't work from `*Linux` or
+  `*IXRun` yet.
 
 ## Built on Timothy Baldwin's port
 

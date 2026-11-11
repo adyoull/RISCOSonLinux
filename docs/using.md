@@ -72,9 +72,18 @@ card and put back at the next start.
 
   The certificates its https lists need (!CaCertificates) are installed too.
 
-## Linux commands from RISC OS: `*Linux` and the root password
+## Linux commands from RISC OS: `*Linux`, `*IXRun` and the root password
 
-- **Running a Linux command:** `*Linux <command>` runs it as root and prints its output; use a task window for anything long. For example, `*Linux apt-get install htop`.
+- **Running a Linux command as root:** `*Linux <command>` runs it as root and prints its output; use a task window (Ctrl-F12) for anything long. For example, `*Linux apt-get install htop`.
+- **Without root:** `*IXRun <command>` (or `*LinuxUser`) runs it as RISC OS's own Linux user: no password, and it can't change the system. For example, `*IXRun ls -l /riscos/HardDisc4`.
+- **Answering a program** (with riscos-harddisc 1.0.0043-1 and riscos-support 1.0.0042-1, from Updates): what you type goes to the Linux program, so one that asks a question or wants a password can be answered.
+  - Delete rubs out, the cursor keys recall the shell's earlier lines, and Ctrl-D ends input.
+  - **Escape is Ctrl-C.** Escape twice within a second and a half stops the command outright.
+- **A shell:** `*IXRun` or `*Linux` with no command starts a Linux shell (root's, for `*Linux`). Type `exit` to come back to RISC OS.
+- **Not yet:** full-screen programs (nano, vi, top). The terminal is a plain one.
+
+![A root shell from *Linux: passwd, rm -i and apt-get's question](screenshots/updates/linux-terminal.png)
+
 - **The password:** the first time `*Linux` or Updates runs a command, it asks you to choose a root password.
   - After that it asks for the password, but not again until it has gone unused for five minutes.
   - `*LinuxPassword` changes it.

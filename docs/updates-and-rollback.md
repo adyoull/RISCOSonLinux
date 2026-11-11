@@ -20,7 +20,7 @@ machine up to date:
 
    ![Changes](screenshots/1.0.0019/12-updates-changes.png)
 2. **Install updates** installs them. It asks for the root password: see
-   [Using](using.md#linux-commands-from-risc-os-linux-and-the-root-password).
+   [Using](using.md#linux-commands-from-risc-os-linux-ixrun-and-the-root-password).
 3. Shut down and switch on again to use them.
 
    ![Installed](screenshots/1.0.0019/14-updates-installed.png)
