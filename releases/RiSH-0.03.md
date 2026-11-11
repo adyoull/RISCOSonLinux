@@ -9,7 +9,7 @@ This is its first release.
 ## Getting it
 
 RiSH comes through **Configure → Updates** on RISC OS on Linux 1.0.0020
-(`riscos-harddisc` 1.0.0047-1, with `riscos-support` 1.0.0044-1, which it
+(`riscos-harddisc` 1.0.0048-1, with `riscos-support` 1.0.0044-1, which it
 needs). Afterwards it is in **Apps**. There is nothing to download from
 this page: RiSH needs the Linux side that arrives with it, so it doesn't
 work copied in on its own, and it doesn't run on other RISC OS machines.
@@ -86,5 +86,8 @@ something goes wrong.
 
 ## Source and licence
 
-MIT licence, (c) 2026 Andrew Youll. Its Linux side is rol-cmd, in
+RiSH is part of RISC OS on Linux. Copyright (c) 2026 Andrew Youll, MIT
+licence (the file `LICENSE` in the application, from riscos-harddisc
+1.0.0048-1). The program is linked with UnixLib, whose licences are in
+`UnixLib-COPYING` beside it. Its Linux side is rol-cmd, in
 `riscos-support`.

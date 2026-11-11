@@ -96,7 +96,7 @@ card and put back at the next start.
 
 ## RiSH, the Linux terminal
 
-RiSH, the RISC Shell (in Apps, with riscos-harddisc 1.0.0047-1 from Updates), is a Linux terminal in a window. Its [release notes](../releases/RiSH-0.03.md) have more pictures.
+RiSH, the RISC Shell (in Apps, with riscos-harddisc 1.0.0048-1 from Updates), is a Linux terminal in a window. Its [release notes](../releases/RiSH-0.03.md) have more pictures.
 
 - **A terminal:** double-click !RiSH. The window is a Linux shell as RISC OS's own Linux user, the one `*IXRun` uses: type Linux commands straight in. `exit`, or closing the window, ends it.
 - **A root terminal:** choose **Root shell** from the icon bar icon's menu, or click the icon with Adjust. It asks for Linux's root password first (the one `*Linux` and Updates use). `su` and `sudo` don't work in the ordinary terminal.
