@@ -80,7 +80,7 @@ card and put back at the next start.
   - Delete rubs out, the cursor keys recall the shell's earlier lines, and Ctrl-D ends input.
   - **Escape is Ctrl-C.** Escape twice within a second and a half stops the command outright.
 - **A shell:** `*IXRun` or `*Linux` with no command starts a Linux shell (root's, for `*Linux`). Type `exit` to come back to RISC OS.
-- **Not yet:** full-screen programs (nano, vi, top). The terminal is a plain one.
+- **Full-screen programs** (nano, vi, top) need RiSH, below: `*Linux` and `*IXRun` are plain, line-by-line terminals.
 
 ![A root shell from *Linux: passwd, rm -i and apt-get's question](screenshots/updates/linux-terminal.png)
 
@@ -93,6 +93,22 @@ card and put back at the next start.
 ![*Linux in a task window](screenshots/1.0.0019/10-linux-command.png)
 
 ![The root password, chosen the first time](screenshots/1.0.0019/09-root-password.png)
+
+## RiSH, the Linux terminal
+
+RiSH (in Apps, with riscos-harddisc 1.0.0045-1 from Updates) is a Linux terminal in a window.
+
+- **A terminal:** double-click !RiSH. The window is a Linux shell as RISC OS's own Linux user, the one `*IXRun` uses: type Linux commands straight in. `exit`, or closing the window, ends it.
+- **A root terminal:** choose **Root shell** from the icon bar icon's menu, or click the icon with Adjust. It asks for Linux's root password first (the one `*Linux` and Updates use). `su` and `sudo` don't work in the ordinary terminal.
+  A root terminal is marked so that it can't be mistaken for an ordinary one: a red title bar beginning "ROOT:", a red cursor, and a line in bold at the top.
+- **Full-screen programs work:** editors, `top`, `less`, and anything else written for an xterm, in colour. The images have few of them installed: in a root terminal, `apt-get install nano` (or `vim`, `htop`, `less`).
+- **The window:** resize it and the program inside is told. The scroll bar shows the last 1000 lines that scrolled off the top. **Large text** on the menu doubles the text size, for 4K screens.
+- **Keys:** everything goes to Linux except F12 and the other keys RISC OS keeps. Copy is End.
+- **Not yet:** copy and paste, and the mouse inside programs.
+
+![Two RiSH windows: a test of colours and line drawing, and top](screenshots/updates/rish.png)
+
+![A root terminal: red title bar, banner and cursor](screenshots/updates/rish-root.png)
 
 ## Protected RISC OS
 
