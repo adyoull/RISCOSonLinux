@@ -87,8 +87,8 @@ Open an [issue](../../issues/new/choose). Please include:
 - The Raspberry Pi 5's fan doesn't start on 1.0.0020 as downloaded:
   Configure → Updates brings the kernel that drives it (6.6.78-7).
 - Full-screen Linux programs (nano, vi, top) don't work from `*Linux` or
-  `*IXRun`: use RiSH, the Linux terminal in Apps (riscos-harddisc
-  1.0.0045-1, from Updates). RiSH has no copy and paste yet.
+  `*IXRun`: use RiSH (the RISC Shell), the Linux terminal in Apps
+  (riscos-harddisc 1.0.0046-1, from Updates). RiSH has no copy and paste yet.
 
 ## Built on Timothy Baldwin's port
 
