@@ -96,7 +96,7 @@ card and put back at the next start.
 
 ## RiSH, the Linux terminal
 
-RiSH, the RISC Shell (in Apps, with riscos-harddisc 1.0.0046-1 from Updates), is a Linux terminal in a window.
+RiSH, the RISC Shell (in Apps, with riscos-harddisc 1.0.0047-1 from Updates), is a Linux terminal in a window.
 
 - **A terminal:** double-click !RiSH. The window is a Linux shell as RISC OS's own Linux user, the one `*IXRun` uses: type Linux commands straight in. `exit`, or closing the window, ends it.
 - **A root terminal:** choose **Root shell** from the icon bar icon's menu, or click the icon with Adjust. It asks for Linux's root password first (the one `*Linux` and Updates use). `su` and `sudo` don't work in the ordinary terminal.
@@ -104,7 +104,8 @@ RiSH, the RISC Shell (in Apps, with riscos-harddisc 1.0.0046-1 from Updates), is
 - **Full-screen programs work:** editors, `top`, `less`, and anything else written for an xterm, in colour. The images have few of them installed: in a root terminal, `apt-get install nano` (or `vim`, `htop`, `less`).
 - **The window:** resize it and the program inside is told. The scroll bar shows the last 1000 lines that scrolled off the top. **Large text** on the menu doubles the text size, for 4K screens.
 - **Keys:** everything goes to Linux except F12 and the other keys RISC OS keeps. Copy is End.
-- **Not yet:** copy and paste, and the mouse inside programs.
+- **Copy and paste:** drag with Select to select text (Adjust moves the end of the selection). **Copy** on the menu, or Ctrl-Shift-C, puts it on RISC OS's clipboard; **Paste**, Ctrl-Shift-V or Shift-Insert types the clipboard's text in. It works with other RISC OS programs in both directions. Ctrl-C and Ctrl-V alone go to Linux.
+- **Not yet:** the mouse inside programs.
 
 ![Two RiSH windows: a test of colours and line drawing, and top](screenshots/updates/rish.png)
 

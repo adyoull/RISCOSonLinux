@@ -88,7 +88,7 @@ Open an [issue](../../issues/new/choose). Please include:
   Configure → Updates brings the kernel that drives it (6.6.78-7).
 - Full-screen Linux programs (nano, vi, top) don't work from `*Linux` or
   `*IXRun`: use RiSH (the RISC Shell), the Linux terminal in Apps
-  (riscos-harddisc 1.0.0046-1, from Updates). RiSH has no copy and paste yet.
+  (riscos-harddisc 1.0.0047-1, from Updates).
 
 ## Built on Timothy Baldwin's port
 
