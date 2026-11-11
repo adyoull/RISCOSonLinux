@@ -28,6 +28,9 @@ Get the images from **[Releases](../../releases)**. The newest is
 
 `SHA256SUMS` in each release lists the files' checksums.
 
+New through Updates: **[RiSH, the RISC Shell](releases/RiSH-0.03.md)**, a
+Linux terminal for the desktop that runs full-screen Linux programs.
+
 ## Installing
 
 - [Raspberry Pi](docs/install-raspberry-pi.md)
