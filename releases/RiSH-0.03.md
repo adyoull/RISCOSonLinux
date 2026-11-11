@@ -9,7 +9,7 @@ This is its first release.
 ## Getting it
 
 RiSH comes through **Configure → Updates** on RISC OS on Linux 1.0.0020
-(`riscos-harddisc` 1.0.0048-1, with `riscos-support` 1.0.0044-1, which it
+(`riscos-harddisc` 1.0.0049-1, with `riscos-support` 1.0.0044-1, which it
 needs). Afterwards it is in **Apps**. There is nothing to download from
 this page: RiSH needs the Linux side that arrives with it, so it doesn't
 work copied in on its own, and it doesn't run on other RISC OS machines.
@@ -80,6 +80,7 @@ something goes wrong.
 
 | Version | Date | What changed |
 |---|---|---|
+| 0.04 | 11 Nov 2026 | Other programs' text in the system font (Edit's, say) is no longer drawn half height after a RiSH window has redrawn: RiSH puts the font's size back as it found it (riscos-harddisc 1.0.0049-1) |
 | 0.03 | 11 Nov 2026 | Copy and paste |
 | 0.02 | 11 Nov 2026 | Its full name, the RISC Shell, in Info and !Help |
 | 0.01 | 11 Nov 2026 | The first version: terminals, full-screen programs, the root terminal, resizing, scrollback, Large text |
