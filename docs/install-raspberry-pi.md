@@ -29,7 +29,7 @@ A card that also has U-Boot for a Pinebook still starts on a Pi.
 
 ### Compute Module 5, Pi 500 and newer Pi 5 boards
 
-The 8 Nov 2026 image (1.0.0020) lacks three files:
+The 8 Nov 2026 image (1.0.0020) lacks four files and a setting:
 
 - `overlays/bcm2712d0.dtbo`, which the Compute Module 5, the Pi 500 and
   the newer Pi 5 boards (those with the "D0" version of the processor)
@@ -40,18 +40,35 @@ The 8 Nov 2026 image (1.0.0020) lacks three files:
   an SD card or NVMe) needs. Without them the Pi says "the installed
   operating system does not indicate support for the Raspberry Pi 5".
 
+- `overlays/dwc2.dtbo` and some lines in `config.txt`, which any Compute
+  Module (4 or 5) needs for the USB sockets of its IO board. Without them
+  the keyboard and mouse do nothing, USB drives are ignored, and a card
+  image on a USB drive starts to a black screen. (The module's own USB
+  port starts as a device port; the lines make it a host, as Raspberry
+  Pi OS's `config.txt` does.)
+
 To add them to a card:
 
 1. Download [cm5-boot-files.zip](files/cm5-boot-files.zip) on another computer and unzip it.
 2. Open the card's first partition (the one other computers can read).
 3. Copy the two `bcm2712-rpi-cm5l-*.dtb` files onto it, next to the other `bcm2712-*.dtb` files.
-4. Copy `bcm2712d0.dtbo` into its `overlays` folder.
-5. If you added `os_check=0` to `config.txt`, take it out.
+4. Copy `bcm2712d0.dtbo` and `dwc2.dtbo` into its `overlays` folder.
+5. Open the card's `config.txt` in a text editor and add the lines of
+   `add-to-config.txt` (from the zip) at the end:
+
+   ```
+   [cm4]
+   otg_mode=1
+   [cm5]
+   dtoverlay=dwc2,dr_mode=host
+   [all]
+   ```
+6. If you added `os_check=0` to `config.txt`, take it out.
 
 This has not been tried on these boards here: please
 [report](https://github.com/adyoull/RISCOSonLinux/issues) how it goes.
-Systems updated to `riscos-kernel-pi` 6.6.78-11 have the files, and later
-images will. ([cm5-lite-dtbs.zip](files/cm5-lite-dtbs.zip) is the earlier
+Systems updated to `riscos-kernel-pi` 6.6.78-12 have all of this (the
+update makes the `config.txt` change itself), and later images will. ([cm5-lite-dtbs.zip](files/cm5-lite-dtbs.zip) is the earlier
 download, with the two `.dtb` files only.)
 
 ## Wi-Fi
