@@ -29,7 +29,7 @@ A card that also has U-Boot for a Pinebook still starts on a Pi.
 
 ### Compute Module 5, Pi 500 and newer Pi 5 boards
 
-The 8 Nov 2026 image (1.0.0020) lacks four files and a setting:
+Images from 1.0.0055 on have all of this. The 8 Nov 2026 image (1.0.0020) lacks four files and a setting:
 
 - `overlays/bcm2712d0.dtbo`, which the Compute Module 5, the Pi 500 and
   the newer Pi 5 boards (those with the "D0" version of the processor)

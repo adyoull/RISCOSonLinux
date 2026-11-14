@@ -18,12 +18,12 @@ This is a **test release**: it runs well on the machines below, but please
 ## Download
 
 Get the images from **[Releases](../../releases)**. The newest is
-[1.0.0020](releases/1.0.0020.md), the first public release (with [the full history](releases/1.0.0020.md#the-full-history) of how it got here).
+[1.0.0055](releases/1.0.0055.md) (14 November 2026). [1.0.0020](releases/1.0.0020.md) was the first public release (with [the full history](releases/1.0.0020.md#the-full-history) of how it got here).
 
 | Image | For | File |
 |---|---|---|
 | Generic | Raspberry Pi 3/3B+/CM3, Zero 2 W, 4/400/CM4, 5/500/CM5; Pinebook and Pinebook Pro; UEFI machines (QEMU, ARM boards and servers) | `riscos-generic.img.xz` |
-| UTM | Apple Silicon Macs | `RISC OS 1.0.0020.utm.zip` |
+| UTM | Apple Silicon Macs | `RISC OS 1.0.0055.utm.zip` |
 | Windows Dev Kit 2023 | Snapdragon 8cx Gen 3 ("Project Volterra") only | `riscos-wdk2023.img.xz` |
 
 `SHA256SUMS` in each release lists the files' checksums.
@@ -81,17 +81,15 @@ Open an [issue](../../issues/new/choose). Please include:
 - The Filer can stop with an abort in the kernel's sprite plotting when
   opening certain directories (seen with !RiscOSM's).
 - On a Raspberry Pi, ROBench's BPut/BGet tests fail to open their file.
-- Discs inside the machine in RISC OS's own format (FileCore on an internal
-  SSD or NVMe) aren't offered to RISC OS. USB discs and SD cards are.
 - Socket_Connect can report success for a connection that was refused.
 - Iris isn't included. Install it with PackMan, which is already set up
-  with riscosdev.com's list. (If PackMan says "One or more files conflict",
-  run Configure → Updates first: riscos-harddisc 1.0.0040-1 fixes it.)
-- The Raspberry Pi 5's fan doesn't start on 1.0.0020 as downloaded:
-  Configure → Updates brings the kernel that drives it (6.6.78-7).
+  with riscosdev.com's list.
+- The Raspberry Pi 5's fan is reported not to start, though its driver is
+  there: being looked into.
+- 1.0.0055's kernels are new and were only started in emulation before
+  release: see [its notes](releases/1.0.0055.md#tested).
 - Full-screen Linux programs (nano, vi, top) don't work from `*Linux` or
-  `*IXRun`: use RiSH (the RISC Shell), the Linux terminal in Apps
-  (riscos-harddisc 1.0.0049-1, from Updates).
+  `*IXRun`: use RiSH (the RISC Shell), the Linux terminal in Apps.
 
 ## Built on Timothy Baldwin's port
 
