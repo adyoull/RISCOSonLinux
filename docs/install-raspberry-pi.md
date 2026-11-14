@@ -67,7 +67,7 @@ To add them to a card:
 
 This has not been tried on these boards here: please
 [report](https://github.com/adyoull/RISCOSonLinux/issues) how it goes.
-Systems updated to `riscos-kernel-pi` 6.6.78-12 have all of this (the
+Systems updated to `riscos-kernel-pi` 6.6.78-13 have all of this (the
 update makes the `config.txt` change itself), and later images will. ([cm5-lite-dtbs.zip](files/cm5-lite-dtbs.zip) is the earlier
 download, with the two `.dtb` files only.)
 
