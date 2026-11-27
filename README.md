@@ -18,12 +18,12 @@ This is a **test release**: it runs well on the machines below, but please
 ## Download
 
 Get the images from **[Releases](../../releases)**. The newest is
-[1.0.0058](releases/1.0.0058.md) (15 November 2026). [1.0.0020](releases/1.0.0020.md) was the first public release (with [the full history](releases/1.0.0020.md#the-full-history) of how it got here).
+[1.0.0092](releases/1.0.0092.md) (27 November 2026), with printing and RISC3D (3D) installed. [1.0.0020](releases/1.0.0020.md) was the first public release (with [the full history](releases/1.0.0020.md#the-full-history) of how it got here).
 
 | Image | For | File |
 |---|---|---|
 | Generic | Raspberry Pi 3/3B+/CM3, Zero 2 W, 4/400/CM4, 5/500/CM5; Pinebook and Pinebook Pro; UEFI machines (QEMU, ARM boards and servers) | `riscos-generic.img.xz` |
-| UTM | Apple Silicon Macs | `RISC OS 1.0.0058.utm.zip` |
+| UTM | Apple Silicon Macs | `RISC OS 1.0.0092.utm.zip` |
 | Windows Dev Kit 2023 | Snapdragon 8cx Gen 3 ("Project Volterra") only | `riscos-wdk2023.img.xz` |
 
 `SHA256SUMS` in each release lists the files' checksums.
@@ -86,8 +86,6 @@ Open an [issue](../../issues/new/choose). Please include:
   with riscosdev.com's list.
 - The Raspberry Pi 5's fan is reported not to start, though its driver is
   there: being looked into.
-- 1.0.0058's kernels are new and were only started in emulation before
-  release: see [its notes](releases/1.0.0058.md#tested).
 - Full-screen Linux programs (nano, vi, top) don't work from `*Linux` or
   `*IXRun`: use RiSH (the RISC Shell), the Linux terminal in Apps.
 
