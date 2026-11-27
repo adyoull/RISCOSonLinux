@@ -18,12 +18,12 @@ This is a **test release**: it runs well on the machines below, but please
 ## Download
 
 Get the images from **[Releases](../../releases)**. The newest is
-[1.0.0092](releases/1.0.0092.md) (27 November 2026), with printing and RISC3D (3D) installed. [1.0.0020](releases/1.0.0020.md) was the first public release (with [the full history](releases/1.0.0020.md#the-full-history) of how it got here).
+[1.0.0093](releases/1.0.0093.md) (27 November 2026), with printing and RISC3D (3D) installed. [1.0.0020](releases/1.0.0020.md) was the first public release (with [the full history](releases/1.0.0020.md#the-full-history) of how it got here).
 
 | Image | For | File |
 |---|---|---|
 | Generic | Raspberry Pi 3/3B+/CM3, Zero 2 W, 4/400/CM4, 5/500/CM5; Pinebook and Pinebook Pro; UEFI machines (QEMU, ARM boards and servers) | `riscos-generic.img.xz` |
-| UTM | Apple Silicon Macs | `RISC OS 1.0.0092.utm.zip` |
+| UTM | Apple Silicon Macs | `RISC OS 1.0.0093.utm.zip` |
 | Windows Dev Kit 2023 | Snapdragon 8cx Gen 3 ("Project Volterra") only | `riscos-wdk2023.img.xz` |
 
 `SHA256SUMS` in each release lists the files' checksums.
